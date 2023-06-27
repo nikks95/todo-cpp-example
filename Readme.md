@@ -1,4 +1,4 @@
-Sure! Here's an idea for a small C++ project: a "To-Do List Manager."
+#C++ project: a "To-Do List Manager."
 
 Project Idea: To-Do List Manager
 
