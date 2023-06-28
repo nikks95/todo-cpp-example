@@ -9,42 +9,19 @@ struct activity_set
     string status;
     unsigned int val;
 };
-
-activity_set set[3]={
-    {"NEW",NEW_ACTIVITY},
-    {"In Progress", IN_PROGRESS},
-    {"Completed", DONE}
-};
-string getStatusName(unsigned int s){
-    for(int i =0; i<(int)sizeof(set)/(int)sizeof(activity_set);i++){
-        if(set[i].val==s){
-            return set[i].status;
-        }
-    }
-    return "";
-}
+string getStatusName(unsigned int s);
 class Activity{
     private:
         string name;
         unsigned int status;        
     public:
         Activity(string name, unsigned int status): name(name),status(status){};
-        string getName(){
-            return name;
-        }
-        void setName(string name){
-            this->name = name;
-        }
-        unsigned int getStatus(){
-            return this->status;
-        }
-        void setStatus(unsigned int status){
-            this->status = status;
-        }
+        string getName();
+        void setName(string name);
+        unsigned int getStatus();
+        void setStatus(unsigned int status);
 
-        string fetchActivityDetails(){
-            return "Activity: "+this->name+" "+" Status: "+getStatusName(this->status);
-        }
+        string fetchActivityDetails();
 
 };
 
